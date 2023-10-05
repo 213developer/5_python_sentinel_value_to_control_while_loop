@@ -12,8 +12,8 @@ average star rating for the movie is displayed.
 # Initialize variables.
 totalStars = 0  # total of star ratings.
 numPatrons = 0  # keep track of number of patrons
-
-
+averageStars = 0
+numStars = 0
 # Get input.
 numStarsString = input("Enter rating for featured movie: ")
 
@@ -21,6 +21,16 @@ numStarsString = input("Enter rating for featured movie: ")
 numStars = float(numStarsString)
 
 # Write while loop here
+while numStars >= 0 and numStars <= 4:
+    numPatrons = numPatrons + 1 #incrementer
+    totalStars = totalStars + numStars
+    # Get input.
+    numStarsString = input("Enter rating for featured movie: ")
+
+    # Convert to double.
+    numStars = float(numStarsString)
 
 # Calculate average star rating
+averageStars = totalStars / numPatrons
+
 print("Average Star Value: " + str(averageStars))
